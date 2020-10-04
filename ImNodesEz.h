@@ -23,6 +23,7 @@
 #pragma once
 
 #include "ImNodes.h"
+#include <string>
 
 namespace ImNodes
 {
@@ -35,7 +36,7 @@ namespace Ez
 struct SlotInfo
 {
     /// Slot title, will be displayed on the node.
-    const char* title;
+    std::string title;
     /// Slot kind, will be used for matching connections to slots of same kind.
     int kind;
 };

@@ -145,7 +145,7 @@ void InputSlots(const SlotInfo* slots, int snum)
     ImGui::BeginGroup();
     {
         for (int i = 0; i < snum; i++)
-            ImNodes::Ez::Slot(slots[i].title, ImNodes::InputSlotKind(slots[i].kind));
+            ImNodes::Ez::Slot(slots[i].title.c_str(), ImNodes::InputSlotKind(slots[i].kind));
     }
     ImGui::EndGroup();
 
@@ -168,7 +168,7 @@ void OutputSlots(const SlotInfo* slots, int snum)
     ImGui::BeginGroup();
     {
         for (int i = 0; i < snum; i++)
-            ImNodes::Ez::Slot(slots[i].title, ImNodes::OutputSlotKind(slots[i].kind));
+            ImNodes::Ez::Slot(slots[i].title.c_str(), ImNodes::OutputSlotKind(slots[i].kind));
     }
     ImGui::EndGroup();
 }
